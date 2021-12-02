@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1156.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RootLayoutController">
+   <top>
+      <MenuBar prefWidth="1156.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="View">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showBookingsView" text="Bookings" />
+                  <MenuItem mnemonicParsing="false" onAction="#showGuestsView" text="Guests" />
+                  <MenuItem mnemonicParsing="false" onAction="#showEmployeesView" text="Employees" />
+                  <MenuItem mnemonicParsing="false" onAction="#showRoomsView" text="Rooms" />
+                  <MenuItem mnemonicParsing="false" onAction="#showPaymentsView" text="Payments" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Quit">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Close Program" />
+               </items>
+          </Menu>
+        </menus>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </MenuBar>
+   </top>
+</BorderPane>

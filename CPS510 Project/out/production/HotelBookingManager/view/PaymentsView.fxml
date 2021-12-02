@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="1073.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PaymentsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c5e1f5" height="470.0" layoutX="-5.0" layoutY="-2.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1082.0" />
+      <VBox layoutX="97.0" layoutY="24.0" spacing="4.0" />
+      <VBox layoutX="9.0" layoutY="28.0" prefWidth="67.0" spacing="12.0" />
+      <TableView fx:id="paymentsTable" editable="true" layoutX="314.0" layoutY="45.0" prefHeight="375.0" prefWidth="739.0" tableMenuButtonVisible="true">
+        <columns>
+            <TableColumn fx:id="paymentID" prefWidth="135.0" text="Payment ID" />
+            <TableColumn fx:id="bookingID" prefWidth="189.0" text="Booking ID" />
+          <TableColumn fx:id="discountCode" prefWidth="222.0" text="Discount Code" />
+          <TableColumn fx:id="total" prefWidth="181.0" text="Total" />
+        </columns>
+      </TableView>
+      <Button fx:id="viewAllAvailableRoomsBtn" layoutX="13.0" layoutY="180.0" mnemonicParsing="false" onAction="#viewPayments" prefHeight="27.0" prefWidth="283.0" text="View All Available Payments" />
+      <Button fx:id="viewAllAvailableRoomsBtn1" layoutX="14.0" layoutY="144.0" mnemonicParsing="false" onAction="#searchPayments" prefHeight="27.0" prefWidth="283.0" text="Query Results" />
+      <Button fx:id="viewAllAvailableRoomsBtn2" layoutX="14.0" layoutY="217.0" mnemonicParsing="false" onAction="#createTable" prefHeight="27.0" prefWidth="283.0" text="Create Table" />
+      <Button fx:id="viewAllAvailableRoomsBtn21" layoutX="15.0" layoutY="256.0" mnemonicParsing="false" onAction="#deletePayments" prefHeight="27.0" prefWidth="283.0" text="Drop Table" />
+      <Label fx:id="paymentsErrorText" layoutX="20.0" layoutY="342.0" prefHeight="28.0" prefWidth="272.0" />
+      <Button fx:id="viewAllAvailableRoomsBtn211" layoutX="16.0" layoutY="295.0" mnemonicParsing="false" onAction="#insertPayments" prefHeight="27.0" prefWidth="283.0" text="Insert Data" />
+      <Label fx:id="paymentsQueryText" layoutX="314.0" layoutY="14.0" prefHeight="28.0" prefWidth="581.0" />
+   </children>
+</AnchorPane>

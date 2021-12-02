@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GuestsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c5e1f5" height="627.0" layoutX="-5.0" layoutY="-2.0" stroke="TRANSPARENT" strokeType="INSIDE" width="928.0" />
+      <VBox layoutX="97.0" layoutY="24.0" spacing="4.0" />
+      <VBox layoutX="9.0" layoutY="28.0" prefWidth="67.0" spacing="12.0" />
+      <TableView fx:id="guestsTable" editable="true" layoutX="314.0" layoutY="45.0" prefHeight="228.0" prefWidth="581.0" tableMenuButtonVisible="true">
+        <columns>
+            <TableColumn fx:id="guestID" prefWidth="87.0" text="Guest ID" />
+            <TableColumn fx:id="Fname" prefWidth="102.0" text="First Name" />
+          <TableColumn fx:id="Lname" prefWidth="110.0" text="Last Name" />
+          <TableColumn fx:id="stayCount" prefWidth="93.0" text="Stay Count" />
+            <TableColumn fx:id="billAddress" prefWidth="177.0" text="Bill Address" />
+        </columns>
+      </TableView>
+      <Button fx:id="viewAllAvailableRoomsBtn" layoutX="13.0" layoutY="257.0" mnemonicParsing="false" onAction="#viewGuests" prefHeight="27.0" prefWidth="283.0" text="View All Available Guests" />
+      <Button fx:id="viewAllAvailableRoomsBtn1" layoutX="14.0" layoutY="221.0" mnemonicParsing="false" onAction="#searchGuests" prefHeight="27.0" prefWidth="283.0" text="Query Results" />
+      <Button fx:id="viewAllAvailableRoomsBtn2" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" onAction="#createTable" prefHeight="27.0" prefWidth="283.0" text="Create Table" />
+      <Button fx:id="viewAllAvailableRoomsBtn21" layoutX="15.0" layoutY="333.0" mnemonicParsing="false" onAction="#deleteGuests" prefHeight="27.0" prefWidth="283.0" text="Drop Table" />
+      <Label fx:id="guestErrorText" layoutX="22.0" layoutY="418.0" prefHeight="28.0" prefWidth="272.0" />
+      <Button fx:id="viewAllAvailableRoomsBtn211" layoutX="16.0" layoutY="372.0" mnemonicParsing="false" onAction="#insertGuests" prefHeight="27.0" prefWidth="283.0" text="Insert Data" />
+      <Label fx:id="guestQueryText" layoutX="314.0" layoutY="14.0" prefHeight="28.0" prefWidth="581.0" />
+      <TableView fx:id="guestsTable2" editable="true" layoutX="314.0" layoutY="284.0" prefHeight="148.0" prefWidth="581.0" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn fx:id="creditCardNum" prefWidth="347.0" text="Credit Card #" />
+            <TableColumn fx:id="creditCard" prefWidth="225.0" text="Credit Card" />
+         </columns>
+      </TableView>
+      <TableView fx:id="guestsTable3" editable="true" layoutX="314.0" layoutY="446.0" prefHeight="148.0" prefWidth="581.0" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn fx:id="postalCode" prefWidth="116.0" text="Postal Code" />
+            <TableColumn fx:id="city" prefWidth="166.0" text="City" />
+            <TableColumn fx:id="province" prefWidth="128.0" text="Province" />
+            <TableColumn fx:id="country" prefWidth="156.0" text="Country" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
